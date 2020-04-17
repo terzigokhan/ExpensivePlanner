@@ -22,7 +22,7 @@ class MyAppHomePage extends StatelessWidget {
     return MaterialApp(
       title: 'Expensive Planner',
       theme: ThemeData(
-          primarySwatch: Colors.cyan,
+          primarySwatch: Colors.blueGrey,
           accentColor: Colors.amber,
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
