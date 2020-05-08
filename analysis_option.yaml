@@ -1,0 +1,5 @@
+name: expensive_planner
+description: A new Flutter project.
+analyzer:
+    enable-experiment:
+     - spread-collections
