@@ -19,6 +19,30 @@ class _InputTransactionWState extends State<InputTransactionW> {
 
   final _amountController = TextEditingController();
   DateTime _selectedDate;
+
+  _InputTransactionWState() {
+    print('Constructor _InputTransactionWState');
+  }
+
+  @override
+  void initState() {
+    //Fetching date
+    print('initState())');
+    super.initState();
+  }
+ @override 
+  void didUpdateWidget(InputTransactionW oldWidget) {
+    // it's gives you widget before updated
+    print('didUpdateWidget())');
+    super.didUpdateWidget(oldWidget);
+  }
+
+@override
+  void dispose() {
+    print('dispose())');
+    super.dispose();
+  }
+
   void _submitData() {
     if (_amountController.text.isEmpty) {
       return;

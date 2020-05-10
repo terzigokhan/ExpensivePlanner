@@ -32,7 +32,16 @@ class TransactionListW extends StatelessWidget {
               );
             },
           )
-        : ListView.builder(
+        : ListView(
+            children: _userTransaction
+                .map((tx) => TransactionItemW(
+                      key: ValueKey(tx.id),
+                      transaction: tx,
+                      deleteTxt: deleteTxt,
+                    ))
+                .toList(),
+          );
+    /*ListView.builder(
             itemBuilder: (ctx, index) {
               return /* Card(
                   child: Row(
@@ -81,7 +90,7 @@ class TransactionListW extends StatelessWidget {
                   TransactionItemW(transaction: _userTransaction[index], deleteTxt: deleteTxt);
             },
             itemCount: _userTransaction.length,
-          );
+          )*/
+    ;
   }
 }
-
